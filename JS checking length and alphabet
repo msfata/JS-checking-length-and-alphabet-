@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	
+	<input type="text" name="text" id="text"/>
+	<button onclick="getLength();">Enter</button>
+	
+
+		<script>
+		/*
+		check input length 
+		*/
+function getLength(){
+			var length=document.getElementById('text').value.length;
+			var check=document.getElementById('text').value;
+				if (length<=15) {
+					getAlphabet(check);
+		  }else{
+					alert("only 15 characters allowd!!!");
+		  }
+}
+
+			/*
+			this function check input to recieve only alphabets
+*/
+			function getAlphabet(inputtxt) {
+				//var letters = /^[A-Za-z]+$/; //this does not allow space
+				var letters = /^[a-zA-Z\s]+$/; //this allows space as well
+				if (inputtxt.match(letters)) {
+					alert("correct data entered thank you !!!");
+				}
+				else {
+					alert("invalid Character entered !!!");
+				}
+			}
+		</script>
+
+	</body>
+</html>
+
+
+
